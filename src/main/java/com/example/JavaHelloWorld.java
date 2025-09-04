@@ -1,4 +1,4 @@
-package guru.springframework;
+package com.example;
 
 /**
  * Created by jt on 2018-12-09.
