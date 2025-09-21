@@ -6,7 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>mb2g-testing</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -196,6 +196,13 @@
 
     <repositories>
         <repository>
+            <id>nexus-snapshot</id>
+            <url>http://localhost:8081/repository/nexus-snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>nexus-release</id>
             <url>http://localhost:8081/repository/nexus-release/</url>
             <snapshots>
@@ -205,6 +212,10 @@
     </repositories>
 
     <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshot</id>
+            <url>http://localhost:8081/repository/nexus-snapshot/</url>
+        </snapshotRepository>
         <repository>
             <id>nexus-release</id>
             <url>http://localhost:8081/repository/nexus-release/</url>
