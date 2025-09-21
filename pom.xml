@@ -48,6 +48,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -194,7 +199,7 @@
         </plugins>
     </reporting>
 
-    <repositories>
+    <!-- <repositories>
         <repository>
             <id>nexus-snapshot</id>
             <url>http://localhost:8081/repository/nexus-snapshot/</url>
@@ -209,7 +214,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 
     <distributionManagement>
         <snapshotRepository>
