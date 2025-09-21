@@ -205,9 +205,9 @@
     </repositories>
 
     <distributionManagement>
-        <snapshotRepository>
+        <repository>
             <id>nexus-release</id>
             <url>http://localhost:8081/repository/nexus-release/</url>
-        </snapshotRepository>
+        </repository>
     </distributionManagement>
 </project>
