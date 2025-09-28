@@ -17,6 +17,7 @@
         <junit.version>5.13.4</junit.version>
         <maven.surefire.version>3.5.3</maven.surefire.version>
         <spotbugs.version>4.9.4.1</spotbugs.version>
+        <TEST_HOST>localhost</TEST_HOST>
     </properties>
 
     <dependencies>
@@ -59,6 +60,9 @@
                 <configuration>
                     <!-- Sets the VM argument line used when unit tests are run. -->
                     <argLine>${surefireArgLine}</argLine>
+                    <environmentVariables>
+                        <TEST_HOST>${TEST_HOST}</TEST_HOST>
+                    </environmentVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -213,6 +217,18 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <TEST_HOST>test.example.com</TEST_HOST>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <TEST_HOST>uat.example.com</TEST_HOST>
+            </properties>
         </profile>
     </profiles>
 </project>

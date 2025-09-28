@@ -10,4 +10,10 @@ public class JavaHelloWorldJUnit5Test {
         JavaHelloWorld helloWorld = new JavaHelloWorld();
         assertEquals("Hello World", helloWorld.getHello());
     }
+
+    @Test
+    public void getHello2(){
+        System.out.println("################");
+        System.out.println(System.getenv("TEST_HOST"));
+    }
 }
